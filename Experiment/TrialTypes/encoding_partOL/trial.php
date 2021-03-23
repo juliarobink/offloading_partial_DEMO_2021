@@ -104,6 +104,15 @@
         .oldNewAnsArea button { width: 100px; padding: 12px; margin: 0px 20px; text-align: center; font-weight: bold; font-size: 1em;}
         .selectedChoice { border: 2px solid green !important; }
         .foodName   {   margin-top: 15px;   text-align: center; font-size: 120%; }
+
+        .drugOneSaveArea { margin: 20px; text-align: center; }
+        .drugOneSaveArea button { width: 100px; padding: 12px; margin: 0px 20px; text-align: center; font-weight: bold; font-size: 1em;}
+
+        .drugTwoSaveArea { margin: 20px; text-align: center; }
+        .drugTwoSaveArea button { width: 100px; padding: 12px; margin: 0px 20px; text-align: center; font-weight: bold; font-size: 1em;}
+
+        .interactionSaveArea { margin: 20px; text-align: center; }
+        .interactionSaveArea button { width: 100px; padding: 12px; margin: 0px 20px; text-align: center; font-weight: bold; font-size: 1em;}
     </style>
     
     
@@ -137,9 +146,30 @@
         </div>
     </div>
 
+    <table width="100%">
+        <tr>
+            <td>
+                <div class="drugOneSaveArea">
+                    <button style="width:10%;" type="button" id="saveDrugOne" name="saveDrugOne" value="SAVE_DRUG_ONE">SAVE</button>  
+                </div>
+            </td>
+            <td>
+                <div class="drugTwoSaveArea">
+                    <button style="width:10%;" type="button" id="saveDrugTwo" name="saveDrugTwo" value="SAVE_DRUG_TWO">SAVE</button>  
+                </div>
+            </td>
+
+            <td>
+                <div class="interactionSaveArea">
+                    <button style="width:10%;" type="button" id="saveInteraction" name="saveInteraction" value="SAVE_INTERACTION">SAVE</button>  
+                </div>
+            </td>
+        </tr>
+    </table>
+
     <div class="precache textright">
-        <input class="button button-trial-advance" id="FormSubmitButton" type="submit" value="Next" />
-    </div>
+            <input class="button button-trial-advance" id="FormSubmitButton" type="submit" value="Next" />
+        </div>
 
     <style>
         .mcPicTable         {   margin: auto;   }
@@ -156,12 +186,15 @@
 
     <div class="oldNewAnsArea stage1">
         <button style="width:30%;" type="button" id="savebuttdont" name="savebutt" value="DONTSAVE">DON'T SAVE</button>
-        <button style="width:30%;" type="button" id="savebuttdo" name="savebutt" value="SAVE">SAVE</button>
+        <!-- <button style="width:30%;" type="button" id="savebuttdo" name="savebutt" value="SAVE">SAVE</button> -->
     </div>
 
     <div class="textcenter finalSubmit">
         <input type="hidden" name="OldNew" id="OldNew"            value=""  >
         <input type="hidden" name="OldNewRT"          value="-1">
+        <input type="hidden" name="drugonesavestatus" id="drugonesavestatus" value="-----">
+        <input type="hidden" name="drugtwosavestatus" id="drugtwosavestatus" value="-----">
+        <input type="hidden" name="interactionsavestatus" id="interactionsavestatus" value="-----">
         <input type="hidden" name="numsavestatus" id="numsavestatus" value="NOSELECTION">
         <input type="hidden" name="newnumsavesvalue" id="newnumsavesvalue" value="<?php echo $numSaves; ?>">
         <input type="hidden" name="numitemsremval" id="numitemsremval" value="<?php echo --$numItems; ?>">
@@ -171,6 +204,9 @@
     </div>
 
     <script>
+
+        var num_sub_elements_saved = 0;
+        console.log("num_sub_elements_saved_init: " + num_sub_elements_saved);
 
         if(numSavesRemaining <= 0)
         {
@@ -183,6 +219,67 @@
         console.log("Num saves:");
         console.log(numSavesRemaining);
 
+        $(".drugOneSaveArea button").on("click", function() {
+            var choice = $(this).html();
+            $("input[name='saveDrugOne']").val(choice);
+            $(this).addClass("selectedChoice");
+
+            (".drugOneSaveArea button").prop("disabled", true);
+            $(".oldNewAnsArea button").prop("disabled", true);
+
+            document.getElementById('drugonesavestatus').value = drug_one;
+
+            num_sub_elements_saved++;
+            console.log("num_sub_elements_saved: " + num_sub_elements_saved);
+
+            if(num_sub_elements_saved == 2) {
+                $(".drugOneSaveArea button").prop("disabled", true);
+                $(".drugTwoSaveArea button").prop("disabled", true);
+                $(".interactionSaveArea button").prop("disabled", true);
+            }
+        });
+
+        $(".drugTwoSaveArea button").on("click", function() {
+            var choice = $(this).html();
+            $("input[name='saveDrugTwo']").val(choice);
+            $(this).addClass("selectedChoice");
+
+            (".drugTwoSaveArea button").prop("disabled", true);
+            $(".oldNewAnsArea button").prop("disabled", true);
+
+            document.getElementById('drugtwosavestatus').value = drug_two;
+
+            num_sub_elements_saved++;
+            console.log("num_sub_elements_saved: " + num_sub_elements_saved);
+
+            if(num_sub_elements_saved == 2) {
+                $(".drugOneSaveArea button").prop("disabled", true);
+                $(".drugTwoSaveArea button").prop("disabled", true);
+                $(".interactionSaveArea button").prop("disabled", true);
+            }
+        });
+
+        $(".interactionSaveArea button").on("click", function() {
+            var choice = $(this).html();
+            $("input[name='saveInteraction']").val(choice);
+            $(this).addClass("selectedChoice");
+
+            (".interactionSaveArea button").prop("disabled", true);
+            $(".oldNewAnsArea button").prop("disabled", true);
+
+            document.getElementById('interactionsavestatus').value = interaction;
+
+            num_sub_elements_saved++;
+            console.log("num_sub_elements_saved: " + num_sub_elements_saved);
+
+            if(num_sub_elements_saved == 2) {
+                $(".drugOneSaveArea button").prop("disabled", true);
+                $(".drugTwoSaveArea button").prop("disabled", true);
+                $(".interactionSaveArea button").prop("disabled", true);
+            }
+        });
+
+
         $(".oldNewAnsArea button").on("click", function() {
             $("input[name='OldNewRT']").val(COLLECTOR.getRT());
             phaseStartTime = Date.now();
@@ -191,19 +288,20 @@
             $(this).addClass("selectedChoice");
             
             $(".oldNewAnsArea button").prop("disabled", true);
+            $(".drugOneSaveArea button").prop("disabled", true);
+            $(".drugTwoSaveArea button").prop("disabled", true);
+            $(".interactionSaveArea button").prop("disabled", true);
 
             document.getElementById('drugonestatic').value = drug_one;
             document.getElementById('drugtwostatic').value = drug_two;
             document.getElementById('interactionstatic').value = interaction;
                 
-            if ($("input[name='OldNew']").val() === 'SAVE') {
+            if(($("input[name='drugonesavestatus']").val() != '-----') || ($("input[name='drugtwosavestatus']").val() != '-----') || ($("input[name='interactionsavestatus']").val() != '-----')) {
                 document.getElementById("numsavestatus").value = "SAVE";
                 document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
-                // $("#FormSubmitButton").click();
             } else {
                 document.getElementById("numsavestatus").value = "NOTSAVE";
                 document.getElementById("newnumsavesvalue").value = numSavesRemaining;
-                // $("#FormSubmitButton").click();
             }
             document.getElementById("numitemsremval").value = --numItemsRemaining;
         });
