@@ -1,8 +1,8 @@
 <?php
     $compTime = 5;        // time in seconds to use for 'computer' timing
 
-    $startingcounter = 6; // number to start for available saves per block
-    $totalNumItems = 12;  // 12 trials per block
+    $startingcounter = 2; // number to start for available saves per block
+    $totalNumItems = 4;  // 12 trials per block
 
     $imageFilePath = dirname($_SESSION['Trial Types'][$trialType]['trial']) . '/bottle.jpg';
     $answers = explode('|', $answer);
@@ -23,21 +23,21 @@
         $numItems = $totalNumItems;
         echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
         echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
-    } elseif($_SESSION['Position'] == 30) {
+    } elseif($_SESSION['Position'] == 14) {
         $numSaves = $startingcounter;
         $numItems = $totalNumItems;
         echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
         echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
-    } elseif($_SESSION['Position'] == 56) {
-        $numSaves = $startingcounter;
-        $numItems = $totalNumItems;
-        echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
-        echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
-     } elseif($_SESSION['Position'] == 82) {
-        $numSaves = $startingcounter;
-        $numItems = $totalNumItems;
-        echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
-        echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
+    } //elseif($_SESSION['Position'] == 56) {
+    //     $numSaves = $startingcounter;
+    //     $numItems = $totalNumItems;
+    //     echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
+    //     echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
+    //  } elseif($_SESSION['Position'] == 82) {
+    //     $numSaves = $startingcounter;
+    //     $numItems = $totalNumItems;
+    //     echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
+    //     echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
     } else {
         $numSaves = $_SESSION['Trials'][$_SESSION['Position']-1]['Response']['newnumsavesvalue'];
         $numItems = $_SESSION['Trials'][$_SESSION['Position']-1]['Response']['numitemsremval'];
