@@ -18,17 +18,18 @@
 
     echo "<div style='border: 3px solid black; width: 50%' padding-top: 10px; padding-bottom: 10px;>";
 
-    if($_SESSION['Position'] == 4) {
+    if($_SESSION['Position'] == 9) {
         $numSaves = $startingcounter;
         $numItems = $totalNumItems;
         echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
         echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
-    } elseif($_SESSION['Position'] == 14) {
-        $numSaves = $startingcounter;
-        $numItems = $totalNumItems;
-        echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
-        echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
-    } //elseif($_SESSION['Position'] == 56) {
+    } 
+    // elseif($_SESSION['Position'] == 14) {
+    //     $numSaves = $startingcounter;
+    //     $numItems = $totalNumItems;
+    //     echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
+    //     echo "<h3><strong>&nbsp;Number of saves remaining: " . $numSaves . "</strong></h3>";
+    // } //elseif($_SESSION['Position'] == 56) {
     //     $numSaves = $startingcounter;
     //     $numItems = $totalNumItems;
     //     echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
