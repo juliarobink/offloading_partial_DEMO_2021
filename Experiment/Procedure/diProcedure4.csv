@@ -1,0 +1,124 @@
+Item,Trial Type,Timing,Text,Settings,Combination,Combo_Code,Fan_Condition,Severity,Interaction,"AdvShuffle List; Target Severity, Interaction",Shuffle
+0,instruct,user,"<p> In this experiment, imagine that you are visiting your doctor's office. Your doctor is describing some interactions that may occur between medications that you're taking.</p> <p> A <i> medication interaction</i> occurs when one drug affects the activity of another drug when both are used together.</p>  <p>Please advance to see more instructions.</p>",,,,,,,,off
+0,instruct,user,"<p>During this task, you will study several medication interactions, and your memory will later be tested. </p>
+<p>For each interaction that you study, you will see two medications and the outcome that would occur if they were to be taken together (e.g., ""dry mouth""). Each outcome will only occur once -- that is, only one pair of medications will result in dry mouth.  </p> <p>Please advance to see more instructions.</p>",,,,,,,,off
+0,instruct,user,"<p> Please remember as much information about the substances and their interactions as you can. </p>
+<p>When you're ready to begin the experiment, click ''Next.''</p> ",,,,,,,,off
+"2,3",interaction,7,,,"fake,fake",0,0,dry mouth,,1,study1
+"4,5",interaction,7,,,"fake,fake",0,0,itching,,2,study1
+"6,7",interaction,7,,,"fake,fake",0,0,cough,,3,study1
+"17,8",interaction,7,,,"fake,real",1,0,trembling,,4,study1
+"18,9",interaction,7,,,"fake,real",1,0,flushing,,5,study1
+"19,10",interaction,7,,,"fake,real",1,0,fever,,6,study1
+"20,21",interaction,7,,,"real,real",2,1,fatigue,,7,study1
+"20,22",interaction,7,,,"real,real",2,1,bloating,,8,study1
+"20,23",interaction,7,,,"real,real",2,1,clumsiness,,9,study1
+"20,24",interaction,7,,,"real,fake",1,1,nausea,,10,study1
+"20,25",interaction,7,,,"real,fake",1,1,diarrhea,,11,study1
+"20,26",interaction,7,,,"real,fake",1,1,arm pain,,12,study1
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,off
+"2,3",interactionTest,user,,,"fake,fake",0,0,dry mouth,,1,test1
+"4,5",interactionTest,user,,,"fake,fake",0,0,itching,,2,test1
+"6,7",interactionTest,user,,,"fake,fake",0,0,cough,,3,test1
+"17,8",interactionTest,user,,,"fake,real",1,0,trembling,,4,test1
+"18,9",interactionTest,user,,,"fake,real",1,0,flushing,,5,test1
+"19,10",interactionTest,user,,,"fake,real",1,0,fever,,6,test1
+"20,21",interactionTest,user,,,"real,real",2,1,fatigue,,7,test1
+"20,22",interactionTest,user,,,"real,real",2,1,bloating,,8,test1
+"20,23",interactionTest,user,,,"real,real",2,1,clumsiness,,9,test1
+"20,24",interactionTest,user,,,"real,fake",1,1,nausea,,10,test1
+"20,25",interactionTest,user,,,"real,fake",1,1,diarrhea,,11,test1
+"20,26",interactionTest,user,,,"real,fake",1,1,arm pain,,12,test1
+0,instruct,user,<p> You will now see the same interactions again. Please try to remember as much information about them as you can. </p>,,,,,,,,off
+"2,3",interaction,7,,,"fake,fake",0,0,dry mouth,,1,study2
+"4,5",interaction,7,,,"fake,fake",0,0,itching,,2,study2
+"6,7",interaction,7,,,"fake,fake",0,0,cough,,3,study2
+"17,8",interaction,7,,,"fake,real",1,0,trembling,,4,study2
+"18,9",interaction,7,,,"fake,real",1,0,flushing,,5,study2
+"19,10",interaction,7,,,"fake,real",1,0,fever,,6,study2
+"20,21",interaction,7,,,"real,real",2,1,fatigue,,7,study2
+"20,22",interaction,7,,,"real,real",2,1,bloating,,8,study2
+"20,23",interaction,7,,,"real,real",2,1,clumsiness,,9,study2
+"20,24",interaction,7,,,"real,fake",1,1,nausea,,10,study2
+"20,25",interaction,7,,,"real,fake",1,1,diarrhea,,11,study2
+"20,26",interaction,7,,,"real,fake",1,1,arm pain,,12,study2
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,off
+"2,3",interactionTest,user,,,"fake,fake",0,0,dry mouth,,1,test2
+"4,5",interactionTest,user,,,"fake,fake",0,0,itching,,2,test2
+"6,7",interactionTest,user,,,"fake,fake",0,0,cough,,3,test2
+"17,8",interactionTest,user,,,"fake,real",1,0,trembling,,4,test2
+"18,9",interactionTest,user,,,"fake,real",1,0,flushing,,5,test2
+"19,10",interactionTest,user,,,"fake,real",1,0,fever,,6,test2
+"20,21",interactionTest,user,,,"real,real",2,1,fatigue,,7,test2
+"20,22",interactionTest,user,,,"real,real",2,1,bloating,,8,test2
+"20,23",interactionTest,user,,,"real,real",2,1,clumsiness,,9,test2
+"20,24",interactionTest,user,,,"real,fake",1,1,nausea,,10,test2
+"20,25",interactionTest,user,,,"real,fake",1,1,diarrhea,,11,test2
+"20,26",interactionTest,user,,,"real,fake",1,1,arm pain,,12,test2
+0,instruct,user,<p> You will now see the same interactions again. Please try to remember as much information about them as you can. </p>,,,,,,,,off
+"2,3",interaction,7,,,"fake,fake",0,0,dry mouth,,1,study3
+"4,5",interaction,7,,,"fake,fake",0,0,itching,,2,study3
+"6,7",interaction,7,,,"fake,fake",0,0,cough,,3,study3
+"17,8",interaction,7,,,"fake,real",1,0,trembling,,4,study3
+"18,9",interaction,7,,,"fake,real",1,0,flushing,,5,study3
+"19,10",interaction,7,,,"fake,real",1,0,fever,,6,study3
+"20,21",interaction,7,,,"real,real",2,1,fatigue,,7,study3
+"20,22",interaction,7,,,"real,real",2,1,bloating,,8,study3
+"20,23",interaction,7,,,"real,real",2,1,clumsiness,,9,study3
+"20,24",interaction,7,,,"real,fake",1,1,nausea,,10,study3
+"20,25",interaction,7,,,"real,fake",1,1,diarrhea,,11,study3
+"20,26",interaction,7,,,"real,fake",1,1,arm pain,,12,study3
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,off
+"2,3",interactionTest,user,,,"fake,fake",0,0,dry mouth,,1,test3
+"4,5",interactionTest,user,,,"fake,fake",0,0,itching,,2,test3
+"6,7",interactionTest,user,,,"fake,fake",0,0,cough,,3,test3
+"17,8",interactionTest,user,,,"fake,real",1,0,trembling,,4,test3
+"18,9",interactionTest,user,,,"fake,real",1,0,flushing,,5,test3
+"19,10",interactionTest,user,,,"fake,real",1,0,fever,,6,test3
+"20,21",interactionTest,user,,,"real,real",2,1,fatigue,,7,test3
+"20,22",interactionTest,user,,,"real,real",2,1,bloating,,8,test3
+"20,23",interactionTest,user,,,"real,real",2,1,clumsiness,,9,test3
+"20,24",interactionTest,user,,,"real,fake",1,1,nausea,,10,test3
+"20,25",interactionTest,user,,,"real,fake",1,1,diarrhea,,11,test3
+"20,26",interactionTest,user,,,"real,fake",1,1,arm pain,,12,test3
+0,instruct,user,<p> You will now see the same interactions again. Please try to remember as much information about them as you can. </p>,,,,,,,,off
+"2,3",interaction,7,,,"fake,fake",0,0,dry mouth,,1,study4
+"4,5",interaction,7,,,"fake,fake",0,0,itching,,2,study4
+"6,7",interaction,7,,,"fake,fake",0,0,cough,,3,study4
+"17,8",interaction,7,,,"fake,real",1,0,trembling,,4,study4
+"18,9",interaction,7,,,"fake,real",1,0,flushing,,5,study4
+"19,10",interaction,7,,,"fake,real",1,0,fever,,6,study4
+"20,21",interaction,7,,,"real,real",2,1,fatigue,,7,study4
+"20,22",interaction,7,,,"real,real",2,1,bloating,,8,study4
+"20,23",interaction,7,,,"real,real",2,1,clumsiness,,9,study4
+"20,24",interaction,7,,,"real,fake",1,1,nausea,,10,study4
+"20,25",interaction,7,,,"real,fake",1,1,diarrhea,,11,study4
+"20,26",interaction,7,,,"real,fake",1,1,arm pain,,12,study4
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,off
+"2,3",interactionTest,user,,,"fake,fake",0,0,dry mouth,,1,test4
+"4,5",interactionTest,user,,,"fake,fake",0,0,itching,,2,test4
+"6,7",interactionTest,user,,,"fake,fake",0,0,cough,,3,test4
+"17,8",interactionTest,user,,,"fake,real",1,0,trembling,,4,test4
+"18,9",interactionTest,user,,,"fake,real",1,0,flushing,,5,test4
+"19,10",interactionTest,user,,,"fake,real",1,0,fever,,6,test4
+"20,21",interactionTest,user,,,"real,real",2,1,fatigue,,7,test4
+"20,22",interactionTest,user,,,"real,real",2,1,bloating,,8,test4
+"20,23",interactionTest,user,,,"real,real",2,1,clumsiness,,9,test4
+"20,24",interactionTest,user,,,"real,fake",1,1,nausea,,10,test4
+"20,25",interactionTest,user,,,"real,fake",1,1,diarrhea,,11,test4
+"20,26",interactionTest,user,,,"real,fake",1,1,arm pain,,12,test4
+0,instruct,user,"<p> Debrief: Some of the medications presented in this experiment do have real effects, but are not meant to serve as an informational or diagnostic tool. Some of the medications presented above are fictitious, and therefore do not actually have any effect. Please contact your own doctor if you have any questions regarding the side effects of your personal medication.</p> <p> The following medications you saw were fictitious: <br> Rolidal <br>
+Lipal <br>
+Pylacor <br>
+Floragin <br>
+Volapram <br>
+Lypamol<br>
+Promazatol<br>
+Clavosec<br>
+Avaridol<br>
+Durapam <br>
+Volexum <br>
+Tretonin <br>
+Dypraxa <br>
+Doloxan <br>
+Phedrazone <br>",,,,,,,,off
