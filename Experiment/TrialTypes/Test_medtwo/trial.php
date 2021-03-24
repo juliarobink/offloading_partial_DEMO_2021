@@ -91,15 +91,15 @@
         echo "<div class='savedItemsArea'>";
         echo "<ol>";
         echo "<h2 style='padding-top:10px;margin-bottom:8px;'><strong>Saved Items:</strong></h2>";
-        $drug_one_list = array();
+        $drug_two_list = array();
 
         if($partial == 0) {
             if($_SESSION['Position'] >= 9 && $_SESSION['Position'] <= 12) {
                 if($_SESSION['Position'] == 9) {
                     foreach($position_range_trial_one as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -114,8 +114,8 @@
                 } else {
                     foreach($position_range_trial_one as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -137,8 +137,8 @@
                 if($_SESSION['Position'] == 19) {
                     foreach($position_range_trial_two as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -153,8 +153,8 @@
                 } else {
                     foreach($position_range_trial_two as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -178,8 +178,8 @@
                 if($_SESSION['Position'] == 9) {
                     foreach($position_range_trial_one as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -194,8 +194,8 @@
                 } else {
                     foreach($position_range_trial_one as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -217,8 +217,8 @@
                 if($_SESSION['Position'] == 19) {
                     foreach($position_range_trial_two as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -233,8 +233,8 @@
                 } else {
                     foreach($position_range_trial_two as $key => $value) {
     
-                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
-                        shuffle($drug_one_list);
+                        array_push($drug_two_list, $_SESSION['Trials'][$value]['Response']['drugtwostatic']);
+                        shuffle($drug_two_list);
     
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
@@ -256,7 +256,6 @@
         }
         
         
-        
         echo "</ol>";
         echo "</div>";
 
@@ -266,23 +265,23 @@
     <div><?php echo $text; ?></div>
 
     <div class="imageArea">
-        <!-- Start Drug 1 Chunk -->
+        <?= $drugs[0] ?>
+        <div class="divider">+</div>
+        <!-- Start Drug 2 Chunk -->
         <div class="bottleArea">
             <div class="drugName">
                 <select name="Response">
                     <option disabled hidden selected></option>
                     <?php
-                        for($ii = 0; $ii < count($drug_one_list); $ii++) {
-                            echo "<option>" . $drug_one_list[$ii] . "</option>";
+                        for($ii = 0; $ii < count($drug_two_list); $ii++) {
+                            echo "<option>" . $drug_two_list[$ii] . "</option>";
                         }
                     ?>
                 </select>
             </div>
             <img src="../Experiment/TrialTypes/Test_medone/bottle.jpg">
         </div>
-        <!-- End Drug 1 Chunk -->
-        <div class="divider">+</div>
-        <?= $drugs[1] ?>
+        <!-- End Drug 2 Chunk -->
         <div class="divider">=</div>
         <div class="sideEffect">
             <?php

@@ -18,7 +18,7 @@
 
     echo "<div style='border: 3px solid black; width: 50%' padding-top: 10px; padding-bottom: 10px;>";
 
-    if($_SESSION['Position'] == 9) {
+    if($_SESSION['Position'] == 14) {
         $numSaves = $startingcounter;
         $numItems = $totalNumItems;
         echo "<h4><strong>&nbsp;Trials remaining: " . $numItems . "</strong></h4>";
@@ -259,6 +259,8 @@
             document.getElementById('drugonestatic').value = drug_one;
             document.getElementById('drugtwostatic').value = drug_two;
             document.getElementById('interactionstatic').value = interaction;
+
+            document.getElementById("savebuttdont").style.color = '#1010104D';
         });
 
         $(".drugTwoSaveArea button").on("click", function() {
@@ -290,6 +292,8 @@
             document.getElementById('drugonestatic').value = drug_one;
             document.getElementById('drugtwostatic').value = drug_two;
             document.getElementById('interactionstatic').value = interaction;
+
+            document.getElementById("savebuttdont").style.color = '#1010104D';
         });
 
         $(".interactionSaveArea button").on("click", function() {
@@ -321,6 +325,8 @@
             document.getElementById('drugonestatic').value = drug_one;
             document.getElementById('drugtwostatic').value = drug_two;
             document.getElementById('interactionstatic').value = interaction;
+
+            document.getElementById("savebuttdont").style.color = '#1010104D';
         });
 
 

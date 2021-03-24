@@ -1,28 +1,28 @@
-Item,Trial Type,Timing,Text,Settings,Combination,Combo_Code,Fan_Condition,Severity,Interaction,"AdvShuffle List; Target Severity, Interaction",Shuffle
-0,instruct,user,"<p> In this experiment, imagine that you are visiting your doctor's office. Your doctor is describing some interactions that may occur between medications that you're taking.</p> <p> A <i> medication interaction</i> occurs when one drug affects the activity of another drug when both are used together.</p>  <p>Please advance to see more instructions.</p>",,,,,,,,off
+Item,Trial Type,Timing,Text,Settings,Partial,Combination,Combo_Code,Fan_Condition,Severity,Interaction,"AdvShuffle List; Target Severity, Interaction",Shuffle
+0,instruct,user,"<p> In this experiment, imagine that you are visiting your doctor's office. Your doctor is describing some interactions that may occur between medications that you're taking.</p> <p> A <i> medication interaction</i> occurs when one drug affects the activity of another drug when both are used together.</p>  <p>Please advance to see more instructions.</p>",,,,,,,,,off
 0,instruct,user,"<p>During this task, you will study several medication interactions, and your memory will later be tested. </p>
-<p>For each interaction that you study, you will see two medications and the outcome that would occur if they were to be taken together (e.g., ""dry mouth""). Each outcome will only occur once -- that is, only one pair of medications will result in dry mouth.  </p> <p>Please advance to see more instructions.</p>",,,,,,,,off
+<p>For each interaction that you study, you will see two medications and the outcome that would occur if they were to be taken together (e.g., ""dry mouth""). Each outcome will only occur once -- that is, only one pair of medications will result in dry mouth.  </p> <p>Please advance to see more instructions.</p>",,,,,,,,,off
 0,instruct,user,"<p> Please remember as much information about the substances and their interactions as you can. </p>
-<p>When you're ready to begin the experiment, click ''Next.''</p> ",,,,,,,,off
-"2,3",encoding_fullOL,7,,,"fake,fake",0,0,dry mouth,,1,study1
-"4,5",encoding_fullOL,7,,,"fake,fake",0,0,itching,,2,study1
-"6,7",encoding_fullOL,7,,,"fake,fake",0,0,cough,,3,study1
-"17,8",encoding_fullOL,7,,,"fake,real",1,0,trembling,,4,study1
-0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,off
-"2,3",encoding_partOL,7,,,"fake,fake",0,0,dry mouth,,1,test1
-"4,5",encoding_partOL,7,,,"fake,fake",0,0,itching,,2,test1
-"6,7",encoding_partOL,7,,,"fake,fake",0,0,cough,,3,test1
-"17,8",encoding_partOL,7,,,"fake,real",1,0,trembling,,4,test1
-0,instruct,user,<p> You will now see the same interactions again. Please try to remember as much information about them as you can. </p>,,,,,,,,off
-"2,3",Test_medone,user,,,"fake,fake",0,0,dry mouth,,1,study2
-"4,5",Test_medone,user,,,"fake,fake",0,0,itching,,2,study2
-"6,7",Test_medone,user,,,"fake,fake",0,0,cough,,3,study2
-"17,8",Test_medone,user,,,"fake,real",1,0,trembling,,4,study2
-0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,off
-"2,3",Test_med1,user,,,"fake,fake",0,0,dry mouth,,1,test2
-"4,5",Test_med2,user,,,"fake,fake",0,0,itching,,2,test2
-"6,7",Test_sideeffect,user,,,"fake,fake",0,0,cough,,3,test2
-"17,8",Test_sideeffect,user,,,"fake,real",1,0,trembling,,4,test2
+<p>When you're ready to begin the experiment, click ''Next.''</p> ",,,,,,,,,off
+"2,3",encoding_fullOL,7,,,,"fake,fake",0,0,dry mouth,,1,study1
+"4,5",encoding_fullOL,7,,,,"fake,fake",0,0,itching,,2,study1
+"6,7",encoding_fullOL,7,,,,"fake,fake",0,0,cough,,3,study1
+"17,8",encoding_fullOL,7,,,,"fake,real",1,0,trembling,,4,study1
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,,off
+"2,3",Test_medone,user,,,0,"fake,fake",0,0,dry mouth,,1,test1
+"4,5",Test_medtwo,user,,,0,"fake,fake",0,0,itching,,2,test1
+"6,7",Test_sideeffect,user,,,0,"fake,fake",0,0,cough,,3,test1
+"17,8",Test_sideeffect,user,,,0,"fake,real",1,0,trembling,,4,test1
+0,instruct,user,<p> You will now see the same interactions again. Please try to remember as much information about them as you can. </p>,,,,,,,,,off
+"2,3",encoding_partOL,7,,,,"fake,fake",0,0,dry mouth,,1,study2
+"4,5",encoding_partOL,7,,,,"fake,fake",0,0,itching,,2,study2
+"6,7",encoding_partOL,7,,,,"fake,fake",0,0,cough,,3,study2
+"17,8",encoding_partOL,7,,,,"fake,real",1,0,trembling,,4,study2
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,,off
+"2,3",Test_medone,user,,,1,"fake,fake",0,0,dry mouth,,1,test2
+"4,5",Test_medtwo,user,,,1,"fake,fake",0,0,itching,,2,test2
+"6,7",Test_sideeffect,user,,,1,"fake,fake",0,0,cough,,3,test2
+"17,8",Test_sideeffect,user,,,1,"fake,real",1,0,trembling,,4,test2
 0,instruct,user,"<p> Debrief: Some of the medications presented in this experiment do have real effects, but are not meant to serve as an informational or diagnostic tool. Some of the medications presented above are fictitious, and therefore do not actually have any effect. Please contact your own doctor if you have any questions regarding the side effects of your personal medication.</p> <p> The following medications you saw were fictitious: <br> Rolidal <br>
 Lipal <br>
 Pylacor <br>
@@ -37,4 +37,4 @@ Volexum <br>
 Tretonin <br>
 Dypraxa <br>
 Doloxan <br>
-Phedrazone <br>",,,,,,,,off
+Phedrazone <br>",,,,,,,,,off

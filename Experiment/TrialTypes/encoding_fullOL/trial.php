@@ -183,6 +183,10 @@
         console.log("Num saves:");
         console.log(numSavesRemaining);
 
+        document.getElementById('drugonestatic').value = drug_one;
+        document.getElementById('drugtwostatic').value = drug_two;
+        document.getElementById('interactionstatic').value = interaction;
+
         $(".oldNewAnsArea button").on("click", function() {
             $("input[name='OldNewRT']").val(COLLECTOR.getRT());
             phaseStartTime = Date.now();

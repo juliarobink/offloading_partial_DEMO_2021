@@ -42,9 +42,8 @@
                     $rightStr = $rightStr.'<span class="rightSkew">'.$drug[$i];
                 }
             }
-            //TODO: FIX repeated spanning issue here:
-            $rightStr .= str_repeat('</span>', $rightCount);
-            $drug = $leftStr.$centerStr.$rightStr;
+
+            array_push($drugs_both_static, $drug);
             
             $drug = '<div class="bottleArea"> <div class="drugName">' . $drug . '</div> <img src="' . $imageFilePath . '"> </div>';
         }
@@ -85,154 +84,178 @@
     </style>
     
     <?php
-        $position_range_trial_one = array(4,5,6,7,8,9,10,11,12,13,14,15);
-        $position_range_trial_two = array(30,31,32,33,34,35,36,37,38,39,40,41);
-        $position_range_trial_three = array(56,57,58,59,60,61,62,63,64,65,66,67);
-        $position_range_trial_four = array(82,83,84,85,86,87,88,89,90,91,92,93);
+        $position_range_trial_one = array(4,5,6,7);
+        $position_range_trial_two = array(14,15,16,17);
         $total_num_saves_trial_one = 0;
         $total_num_saves_trial_two = 0;
-        $total_num_saves_trial_three = 0;
-        $total_num_saves_trial_four = 0;
         echo "<div class='savedItemsArea'>";
         echo "<ol>";
         echo "<h2 style='padding-top:10px;margin-bottom:8px;'><strong>Saved Items:</strong></h2>";
-        if($_SESSION['Position'] >= 17 && $_SESSION['Position'] <= 28) {
-            if($_SESSION['Position'] == 17) {
-                foreach($position_range_trial_one as $key => $value) {
-                    
-                    $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
-                    if(preg_match('/\s/', $static_interaction)) {
-                        $static_interaction = str_replace(' ', '_', $static_interaction);
-                    }
+        $drug_one_list = array();
 
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-                        echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        $total_num_saves_trial_one++;
-                    }
-                }
-            } else {
-                foreach($position_range_trial_one as $key => $value) {
-
-                    $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
-                    if(preg_match('/\s/', $static_interaction)) {
-                        $static_interaction = str_replace(' ', '_', $static_interaction);
-                    }
-
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-                        if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        } else {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        }
-                        $total_num_saves_trial_one++;
-                    }
-                }
-            } 
-            echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_one . "</strong></p>";
-        } elseif($_SESSION['Position'] >= 43 && $_SESSION['Position'] <= 54) {
-            if($_SESSION['Position'] == 43) {
-                foreach($position_range_trial_two as $key => $value) {
-
-                    $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
-                    if(preg_match('/\s/', $static_interaction)) {
-                        $static_interaction = str_replace(' ', '_', $static_interaction);
-                    }
-
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-                        echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        $total_num_saves_trial_two++;
-                    }
-                }
-            } else {
-                foreach($position_range_trial_two as $key => $value) {
-
-                    $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
-                    if(preg_match('/\s/', $static_interaction)) {
-                        $static_interaction = str_replace(' ', '_', $static_interaction);
-                    }
-
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-                        if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        } else {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        }
-                        $total_num_saves_trial_two++;
-                    }
-                }
-            } 
-            echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_two . "</strong></p>";
-
-        } elseif($_SESSION['Position'] >= 69 && $_SESSION['Position'] <= 80) {
-            if($_SESSION['Position'] == 69) {
-                foreach($position_range_trial_three as $key => $value) {
-
-                    $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
-                    if(preg_match('/\s/', $static_interaction)) {
-                        $static_interaction = str_replace(' ', '_', $static_interaction);
-                    }
-
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-                        echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        $total_num_saves_trial_three++;
-                    }
-                }
-            } else {
-                foreach($position_range_trial_three as $key => $value) {
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-
+        if($partial == 0) {
+            if($_SESSION['Position'] >= 9 && $_SESSION['Position'] <= 12) {
+                if($_SESSION['Position'] == 9) {
+                    foreach($position_range_trial_one as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
                             $static_interaction = str_replace(' ', '_', $static_interaction);
                         }
-
-                        if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        } else {
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
                             echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            $total_num_saves_trial_one++;
                         }
-                        $total_num_saves_trial_three++;
                     }
-                }
-            } 
-
-            echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_three . "</strong></p>";
-
-        } elseif($_SESSION['Position'] >= 95 && $_SESSION['Position'] <= 106) {
-            if($_SESSION['Position'] == 95) {
-                foreach($position_range_trial_four as $key => $value) {
-
-                    $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
-                    if(preg_match('/\s/', $static_interaction)) {
-                        $static_interaction = str_replace(' ', '_', $static_interaction);
-                    }
-
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-                        echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        $total_num_saves_trial_four++;
-                    }
-                }
-            } else {
-                foreach($position_range_trial_four as $key => $value) {
-                    if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-
+                } else {
+                    foreach($position_range_trial_one as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
                         $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                         if(preg_match('/\s/', $static_interaction)) {
                             $static_interaction = str_replace(' ', '_', $static_interaction);
                         }
-
-                        if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
-                        } else {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
+                            if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            } else {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            }
+                            $total_num_saves_trial_one++;
                         }
-                        $total_num_saves_trial_four++;
                     }
-                }
-            } 
-            
-            echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_four . "</strong></p>";
+                } 
+                echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_one . "</strong></p>";
+            } elseif($_SESSION['Position'] >= 19 && $_SESSION['Position'] <= 22) {
+                if($_SESSION['Position'] == 19) {
+                    foreach($position_range_trial_two as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
+                        $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
+                        if(preg_match('/\s/', $static_interaction)) {
+                            $static_interaction = str_replace(' ', '_', $static_interaction);
+                        }
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
+                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            $total_num_saves_trial_two++;
+                        }
+                    }
+                } else {
+                    foreach($position_range_trial_two as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
+                        $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
+                        if(preg_match('/\s/', $static_interaction)) {
+                            $static_interaction = str_replace(' ', '_', $static_interaction);
+                        }
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
+                            if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            } else {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            }
+                            $total_num_saves_trial_two++;
+                        }
+                    }
+                } 
+                echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_two . "</strong></p>";
+            }
+        } elseif($partial == 1) {
+            if($_SESSION['Position'] >= 9 && $_SESSION['Position'] <= 12) {
+                if($_SESSION['Position'] == 9) {
+                    foreach($position_range_trial_one as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
+                        $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
+                        if(preg_match('/\s/', $static_interaction)) {
+                            $static_interaction = str_replace(' ', '_', $static_interaction);
+                        }
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
+                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
+                            $total_num_saves_trial_one++;
+                        }
+                    }
+                } else {
+                    foreach($position_range_trial_one as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
+                        $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
+                        if(preg_match('/\s/', $static_interaction)) {
+                            $static_interaction = str_replace(' ', '_', $static_interaction);
+                        }
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
+                            if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
+                            } else {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
+                            }
+                            $total_num_saves_trial_one++;
+                        }
+                    }
+                } 
+                echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_one . "</strong></p>";
+            } elseif($_SESSION['Position'] >= 19 && $_SESSION['Position'] <= 22) {
+                if($_SESSION['Position'] == 19) {
+                    foreach($position_range_trial_two as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
+                        $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
+                        if(preg_match('/\s/', $static_interaction)) {
+                            $static_interaction = str_replace(' ', '_', $static_interaction);
+                        }
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
+                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
+                            $total_num_saves_trial_two++;
+                        }
+                    }
+                } else {
+                    foreach($position_range_trial_two as $key => $value) {
+    
+                        array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                        shuffle($drug_one_list);
+    
+                        $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
+                        if(preg_match('/\s/', $static_interaction)) {
+                            $static_interaction = str_replace(' ', '_', $static_interaction);
+                        }
+    
+                        if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
+                            if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
+                            } else {
+                                echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
+                            }
+                            $total_num_saves_trial_two++;
+                        }
+                    }
+                } 
+                echo "<p><strong>Total Number of Items Saved: " . $total_num_saves_trial_two . "</strong></p>";
+            }
         }
+
+        
         
         
         echo "</ol>";
@@ -243,6 +266,11 @@
     
     <div><?php echo $text; ?></div>
 
+    <?php
+        $side_effect_options = array("dry mouth", "itching", "cough", "trembling", "flushing", "fever", "fatigue", "bloating", "clumsiness", "nausea", "diarrhea", "arm pain");
+        shuffle($side_effect_options);
+    ?>
+
     <div class="imageArea">
         <?= $drugs[0] ?>
         <div class="divider">+</div>
@@ -251,18 +279,11 @@
         <div class="sideEffect">
             <select name="Response">
                 <option disabled hidden selected></option>
-                <option>dry mouth</option>
-                <option>itching</option>
-                <option>cough</option>
-                <option>trembling</option>
-                <option>flushing</option>
-                <option>fever</option>
-                <option>fatigue</option>
-                <option>bloating</option>
-                <option>clumsiness</option>
-                <option>nausea</option>
-                <option>diarrhea</option>
-                <option>arm pain</option>
+                <?php
+                        for($ii = 0; $ii < count($side_effect_options); $ii++) {
+                            echo "<option>" . $side_effect_options[$ii] . "</option>";
+                        }
+                    ?>
             </select>
         </div>
     </div>
