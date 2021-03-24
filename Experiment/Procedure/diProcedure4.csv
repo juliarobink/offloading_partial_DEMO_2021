@@ -2,23 +2,23 @@ Item,Trial Type,Timing,Text,Settings,Partial,Combination,Combo_Code,Fan_Conditio
 0,instruct,user,"<p> In this experiment, imagine that you are visiting your doctor's office. Your doctor is describing some interactions that may occur between medications that you're taking.</p> <p> A <i> medication interaction</i> occurs when one drug affects the activity of another drug when both are used together.</p>  <p>Please advance to see more instructions.</p>",,,,,,,,,off
 0,instruct,user,"<p>During this task, you will study several medication interactions, and your memory will later be tested. </p>
 <p>For each interaction that you study, you will see two medications and the outcome that would occur if they were to be taken together (e.g., ""dry mouth""). Each outcome will only occur once -- that is, only one pair of medications will result in dry mouth.  </p> <p>Please advance to see more instructions.</p>",,,,,,,,,off
-0,instruct,user,"<p> Please remember as much information about the substances and their interactions as you can. </p>
+0,instruct,user,"<p> Please remember as much information about the substances and their interactions as you can. </p> <p> On each trial, you will have the opportunity to choose whether you would like to SAVE the interaction that is on the screen. </p> <p> If you choose to SAVE the interaction, you will have access to the entire interaction at a later time.</p> <p> Please click either ""SAVE"" or ""DON'T SAVE"" on each trial to indicate your choice.</p>
 <p>When you're ready to begin the experiment, click ''Next.''</p> ",,,,,,,,,off
 "2,3",encoding_fullOL,7,,,,"fake,fake",0,0,dry mouth,,1,study1
 "4,5",encoding_fullOL,7,,,,"fake,fake",0,0,itching,,2,study1
 "6,7",encoding_fullOL,7,,,,"fake,fake",0,0,cough,,3,study1
 "17,8",encoding_fullOL,7,,,,"fake,real",1,0,trembling,,4,study1
-0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,,off
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. <p> You may consult the list of interactions that you saved in the previous trial to help you on this test.</p>Please take as much time as you need. </p>,,,,,,,,,off
 "2,3",Test_medone,user,,,0,"fake,fake",0,0,dry mouth,,1,test1
 "4,5",Test_medtwo,user,,,0,"fake,fake",0,0,itching,,2,test1
 "6,7",Test_sideeffect,user,,,0,"fake,fake",0,0,cough,,3,test1
 "17,8",Test_sideeffect,user,,,0,"fake,real",1,0,trembling,,4,test1
-0,instruct,user,<p> You will now see the same interactions again. Please try to remember as much information about them as you can. </p>,,,,,,,,,off
+0,instruct,user,"<p> Please remember as much information about the substances and their interactions as you can. </p> <p> Each interaction is composed of three elements: medication 1, medication 2 and a side effect.</p><p> On each trial, you will have the opportunity to choose whether you would like to <b>save</b> two of the three elements of the interaction that is shown on the screen. </p><p>To save an element, please click on the ""SAVE"" button below that element</p> <p> Whichever two elements of the interaction you saved  will be accessible to you at a later time.</p> <p> If you do not wish to save any elements of the interaction, please click ""DON'T SAVE"".</p> ",,,,,,,,,off
 "2,3",encoding_partOL,7,,,,"fake,fake",0,0,dry mouth,,1,study2
 "4,5",encoding_partOL,7,,,,"fake,fake",0,0,itching,,2,study2
 "6,7",encoding_partOL,7,,,,"fake,fake",0,0,cough,,3,study2
 "17,8",encoding_partOL,7,,,,"fake,real",1,0,trembling,,4,study2
-0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,,off
+0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. <p> You may consult the list of interactions that you saved in the previous trial to help you on this test.</p>Please take as much time as you need. </p>,,,,,,,,,off
 "2,3",Test_medone,user,,,1,"fake,fake",0,0,dry mouth,,1,test2
 "4,5",Test_medtwo,user,,,1,"fake,fake",0,0,itching,,2,test2
 "6,7",Test_sideeffect,user,,,1,"fake,fake",0,0,cough,,3,test2
