@@ -225,7 +225,7 @@
             $("input[name='saveDrugOne']").val(choice);
             $(this).addClass("selectedChoice");
 
-            (".drugOneSaveArea button").prop("disabled", true);
+            $("#saveDrugOne").prop("disabled", true);
             $(".oldNewAnsArea button").prop("disabled", true);
 
             document.getElementById('drugonesavestatus').value = drug_one;
@@ -245,7 +245,7 @@
             $("input[name='saveDrugTwo']").val(choice);
             $(this).addClass("selectedChoice");
 
-            (".drugTwoSaveArea button").prop("disabled", true);
+            $(".drugTwoSaveArea button").prop("disabled", true);
             $(".oldNewAnsArea button").prop("disabled", true);
 
             document.getElementById('drugtwosavestatus').value = drug_two;
@@ -265,7 +265,7 @@
             $("input[name='saveInteraction']").val(choice);
             $(this).addClass("selectedChoice");
 
-            (".interactionSaveArea button").prop("disabled", true);
+            $(".interactionSaveArea button").prop("disabled", true);
             $(".oldNewAnsArea button").prop("disabled", true);
 
             document.getElementById('interactionsavestatus').value = interaction;
