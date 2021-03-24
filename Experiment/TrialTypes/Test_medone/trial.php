@@ -102,7 +102,7 @@
                     }
 
                     if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
-                        echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                        echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
                         $total_num_saves_trial_one++;
                     }
                 }
@@ -116,9 +116,9 @@
 
                     if($_SESSION['Trials'][$value]['Response']['numsavestatus'] == "SAVE") {
                         if($_SESSION['Trials'][$_SESSION['Position']-1]['Response']["itemcheckbox" . $static_interaction] == "CHECKED") {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED' checked><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
                         } else {
-                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonestatic'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwostatic'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionstatic'] . "</del></h1>";
+                            echo "<li><input type='checkbox' name='itemcheckbox" . $static_interaction . "' value='CHECKED'><del>" . $_SESSION['Trials'][$value]['Response']['drugonesavestatus'] . " + " . $_SESSION['Trials'][$value]['Response']['drugtwosavestatus'] . " = " . $_SESSION['Trials'][$value]['Response']['interactionsavestatus'] . "</del></h1>";
                         }
                         $total_num_saves_trial_one++;
                     }
@@ -138,21 +138,24 @@
 
     <div class="imageArea">
         <div class="bottleArea">
-            <select name="Response">
-                <option disabled hidden selected></option>
-                <option>dry mouth</option>
-                <option>itching</option>
-                <option>cough</option>
-                <option>trembling</option>
-                <option>flushing</option>
-                <option>fever</option>
-                <option>fatigue</option>
-                <option>bloating</option>
-                <option>clumsiness</option>
-                <option>nausea</option>
-                <option>diarrhea</option>
-                <option>arm pain</option>
-            </select>
+            <div class="drugName">
+                <select name="Response">
+                    <option disabled hidden selected></option>
+                    <option>dry mouth</option>
+                    <option>itching</option>
+                    <option>cough</option>
+                    <option>trembling</option>
+                    <option>flushing</option>
+                    <option>fever</option>
+                    <option>fatigue</option>
+                    <option>bloating</option>
+                    <option>clumsiness</option>
+                    <option>nausea</option>
+                    <option>diarrhea</option>
+                    <option>arm pain</option>
+                </select>
+            </div>
+            <img src="../Experiment/TrialTypes/Test_medone/bottle.jpg">
         </div>
         <div class="divider">+</div>
         <?= $drugs[1] ?>
