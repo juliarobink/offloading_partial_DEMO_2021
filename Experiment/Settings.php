@@ -4,7 +4,7 @@
     Copyright 2012-2014 Mikey Garcia & Nate Kornell
  */
     #### setting experiment variables ####
-    $experimentName   = 'OFF_Fan';            // Recorded in datafile and can be useful
+    $experimentName   = 'OFF_DEMO';            // Recorded in datafile and can be useful
     $loginCounterName = '1.txt';                // Change to restart condition cycling
     $doDemographics   = FALSE;                  // Can be TRUE or FALSE
     $doInstructions   = false;
