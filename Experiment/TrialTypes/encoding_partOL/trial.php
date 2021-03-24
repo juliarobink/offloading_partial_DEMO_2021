@@ -107,13 +107,13 @@
         .foodName   {   margin-top: 15px;   text-align: center; font-size: 120%; }
 
         .drugOneSaveArea { margin: 20px; text-align: center; }
-        .drugOneSaveArea button { width: 100px; padding: 12px; margin: 0px 20px; text-align: center; font-weight: bold; font-size: 1em;}
+        .drugOneSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em; margin-left: 20px;}
 
         .drugTwoSaveArea { margin: 20px; text-align: center; }
-        .drugTwoSaveArea button { width: 100px; padding: 12px; margin: 0px 20px; text-align: center; font-weight: bold; font-size: 1em;}
+        .drugTwoSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em; margin-left: 20px;}
 
         .interactionSaveArea { margin: 20px; text-align: center; }
-        .interactionSaveArea button { width: 100px; padding: 12px; margin: 0px 20px; text-align: center; font-weight: bold; font-size: 1em;}
+        .interactionSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em;}
     </style>
     
     
@@ -151,26 +151,26 @@
         <tr>
             <td>
                 <div class="drugOneSaveArea">
-                    <button style="width:10%;" type="button" id="saveDrugOne" name="saveDrugOne" value="SAVE_DRUG_ONE">SAVE</button>  
+                    <button style="width:25%;" type="button" id="saveDrugOne" name="saveDrugOne" value="SAVE_DRUG_ONE">SAVE</button>  
                 </div>
             </td>
             <td>
                 <div class="drugTwoSaveArea">
-                    <button style="width:10%;" type="button" id="saveDrugTwo" name="saveDrugTwo" value="SAVE_DRUG_TWO">SAVE</button>  
+                    <button style="width:25%;" type="button" id="saveDrugTwo" name="saveDrugTwo" value="SAVE_DRUG_TWO">SAVE</button>  
                 </div>
             </td>
 
             <td>
                 <div class="interactionSaveArea">
-                    <button style="width:10%;" type="button" id="saveInteraction" name="saveInteraction" value="SAVE_INTERACTION">SAVE</button>  
+                    <button style="width:50%;" type="button" id="saveInteraction" name="saveInteraction" value="SAVE_INTERACTION">SAVE</button>  
                 </div>
             </td>
         </tr>
     </table>
 
-    <div class="precache textright">
+    <!-- <div class="precache textright">
             <input class="button button-trial-advance" id="FormSubmitButton" type="submit" value="Next" />
-        </div>
+        </div> -->
 
     <style>
         .mcPicTable         {   margin: auto;   }
@@ -297,15 +297,17 @@
             document.getElementById('drugtwostatic').value = drug_two;
             document.getElementById('interactionstatic').value = interaction;
                 
-            if(($("input[name='drugonesavestatus']").val() != '-----') || ($("input[name='drugtwosavestatus']").val() != '-----') || ($("input[name='interactionsavestatus']").val() != '-----')) {
-                document.getElementById("numsavestatus").value = "SAVE";
-                document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
-            } else {
+            //  else {
                 document.getElementById("numsavestatus").value = "NOTSAVE";
                 document.getElementById("newnumsavesvalue").value = numSavesRemaining;
-            }
+            // }
             document.getElementById("numitemsremval").value = --numItemsRemaining;
         });
+
+        if(($("input[name='drugonesavestatus']").val() != '-----') || ($("input[name='drugtwosavestatus']").val() != '-----') || ($("input[name='interactionsavestatus']").val() != '-----')) {
+            document.getElementById("numsavestatus").value = "SAVE";
+            document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
+        }
     </script>
     
 
