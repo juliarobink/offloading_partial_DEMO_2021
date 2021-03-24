@@ -151,26 +151,26 @@
         <tr>
             <td>
                 <div class="drugOneSaveArea">
-                    <button style="width:25%;" type="button" id="saveDrugOne" name="saveDrugOne" value="SAVE_DRUG_ONE">SAVE</button>  
+                    <button style="width:50%;" type="button" id="saveDrugOne" name="saveDrugOne" value="SAVE_DRUG_ONE">SAVE</button>  
                 </div>
             </td>
             <td>
                 <div class="drugTwoSaveArea">
-                    <button style="width:25%;" type="button" id="saveDrugTwo" name="saveDrugTwo" value="SAVE_DRUG_TWO">SAVE</button>  
+                    <button style="width:50%;" type="button" id="saveDrugTwo" name="saveDrugTwo" value="SAVE_DRUG_TWO">SAVE</button>  
                 </div>
             </td>
 
             <td>
                 <div class="interactionSaveArea">
-                    <button style="width:50%;" type="button" id="saveInteraction" name="saveInteraction" value="SAVE_INTERACTION">SAVE</button>  
+                    <button style="width:75%;" type="button" id="saveInteraction" name="saveInteraction" value="SAVE_INTERACTION">SAVE</button>  
                 </div>
             </td>
         </tr>
     </table>
 
-    <div class="precache textright">
+    <!-- <div class="precache textright">
             <input class="button button-trial-advance" id="FormSubmitButton" type="submit" value="Next" />
-        </div>
+        </div> -->
 
     <style>
         .mcPicTable         {   margin: auto;   }
@@ -211,7 +211,6 @@
 
         if(numSavesRemaining <= 0)
         {
-            document.getElementById("savebuttdo").disabled = true;
             document.getElementById("savebuttdont").disabled = true;
         }
 
