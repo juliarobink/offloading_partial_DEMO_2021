@@ -219,6 +219,8 @@
         console.log("Num saves:");
         console.log(numSavesRemaining);
 
+        var save_clicks_made = 0;
+
         $(".drugOneSaveArea button").on("click", function() {
             var choice = $(this).html();
             $("input[name='saveDrugOne']").val(choice);
@@ -236,6 +238,13 @@
                 $(".drugOneSaveArea button").prop("disabled", true);
                 $(".drugTwoSaveArea button").prop("disabled", true);
                 $(".interactionSaveArea button").prop("disabled", true);
+            }
+
+            save_clicks_made++;
+
+            if(save_clicks_made == 0) {
+                document.getElementById("numsavestatus").value = "SAVE";
+                document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
             }
         });
 
@@ -257,6 +266,13 @@
                 $(".drugTwoSaveArea button").prop("disabled", true);
                 $(".interactionSaveArea button").prop("disabled", true);
             }
+
+            save_clicks_made++;
+
+            if(save_clicks_made == 0) {
+                document.getElementById("numsavestatus").value = "SAVE";
+                document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
+            }
         });
 
         $(".interactionSaveArea button").on("click", function() {
@@ -276,6 +292,13 @@
                 $(".drugOneSaveArea button").prop("disabled", true);
                 $(".drugTwoSaveArea button").prop("disabled", true);
                 $(".interactionSaveArea button").prop("disabled", true);
+            }
+
+            save_clicks_made++;
+
+            if(save_clicks_made == 0) {
+                document.getElementById("numsavestatus").value = "SAVE";
+                document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
             }
         });
 
@@ -301,13 +324,6 @@
                 document.getElementById("newnumsavesvalue").value = numSavesRemaining;
             // }
             document.getElementById("numitemsremval").value = --numItemsRemaining;
-        });
-
-        $("form").on("submit", function() {
-            if(($("input[name='drugonesavestatus']").val() != '-----') || ($("input[name='drugtwosavestatus']").val() != '-----') || ($("input[name='interactionsavestatus']").val() != '-----')) {
-                document.getElementById("numsavestatus").value = "SAVE";
-                document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
-            }
         });
         
     </script>
