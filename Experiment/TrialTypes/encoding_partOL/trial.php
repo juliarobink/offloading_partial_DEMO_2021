@@ -212,6 +212,9 @@
         if(numSavesRemaining <= 0)
         {
             document.getElementById("savebuttdont").disabled = true;
+            document.getElementById("saveDrugOne").disabled = true;
+            document.getElementById("saveDrugTwo").disabled = true;
+            document.getElementById("saveInteraction").disabled = true;            
         }
 
         var phaseStartTime;
@@ -226,7 +229,7 @@
             $("input[name='saveDrugOne']").val(choice);
             $(this).addClass("selectedChoice");
 
-            $("#saveDrugOne").prop("disabled", true);
+            $(".drugOneSaveArea button").prop("disabled", true);
             $(".oldNewAnsArea button").prop("disabled", true);
 
             document.getElementById('drugonesavestatus').value = drug_one;
