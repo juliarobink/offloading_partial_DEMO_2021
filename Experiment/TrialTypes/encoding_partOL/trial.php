@@ -107,13 +107,13 @@
         .foodName   {   margin-top: 15px;   text-align: center; font-size: 120%; }
 
         .drugOneSaveArea { margin: 20px; text-align: center; }
-        .drugOneSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em; margin-left: 20px;}
+        .drugOneSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em; margin-left: 20px; float: left;}
 
         .drugTwoSaveArea { margin: 20px; text-align: center; }
-        .drugTwoSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em; margin-left: 20px;}
+        .drugTwoSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em; margin-left: 20px; float: left;}
 
         .interactionSaveArea { margin: 20px; text-align: center; }
-        .interactionSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em;}
+        .interactionSaveArea button { width: 100px; padding: 12px; text-align: center; font-weight: bold; font-size: 1em; float: left;}
     </style>
     
     
@@ -168,9 +168,9 @@
         </tr>
     </table>
 
-    <!-- <div class="precache textright">
+    <div class="precache textright">
             <input class="button button-trial-advance" id="FormSubmitButton" type="submit" value="Next" />
-        </div> -->
+        </div>
 
     <style>
         .mcPicTable         {   margin: auto;   }
@@ -304,10 +304,13 @@
             document.getElementById("numitemsremval").value = --numItemsRemaining;
         });
 
-        if(($("input[name='drugonesavestatus']").val() != '-----') || ($("input[name='drugtwosavestatus']").val() != '-----') || ($("input[name='interactionsavestatus']").val() != '-----')) {
-            document.getElementById("numsavestatus").value = "SAVE";
-            document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
-        }
+        $("form").on("submit", function() {
+            if(($("input[name='drugonesavestatus']").val() != '-----') || ($("input[name='drugtwosavestatus']").val() != '-----') || ($("input[name='interactionsavestatus']").val() != '-----')) {
+                document.getElementById("numsavestatus").value = "SAVE";
+                document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
+            }
+        });
+        
     </script>
     
 
