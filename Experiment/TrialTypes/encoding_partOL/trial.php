@@ -250,6 +250,10 @@
             }
 
             save_clicks_made++;
+
+            document.getElementById('drugonestatic').value = drug_one;
+            document.getElementById('drugtwostatic').value = drug_two;
+            document.getElementById('interactionstatic').value = interaction;
         });
 
         $(".drugTwoSaveArea button").on("click", function() {
@@ -277,6 +281,10 @@
             }
 
             save_clicks_made++;
+
+            document.getElementById('drugonestatic').value = drug_one;
+            document.getElementById('drugtwostatic').value = drug_two;
+            document.getElementById('interactionstatic').value = interaction;
         });
 
         $(".interactionSaveArea button").on("click", function() {
@@ -304,6 +312,10 @@
             }
 
             save_clicks_made++;
+
+            document.getElementById('drugonestatic').value = drug_one;
+            document.getElementById('drugtwostatic').value = drug_two;
+            document.getElementById('interactionstatic').value = interaction;
         });
 
 

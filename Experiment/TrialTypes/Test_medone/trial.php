@@ -92,10 +92,14 @@
         echo "<div class='savedItemsArea'>";
         echo "<ol>";
         echo "<h2 style='padding-top:10px;margin-bottom:8px;'><strong>Saved Items:</strong></h2>";
+        $drug_one_list = array();
         if($_SESSION['Position'] >= 14 && $_SESSION['Position'] <= 17) {
             if($_SESSION['Position'] == 14) {
                 foreach($position_range_trial_one as $key => $value) {
-                    
+
+                    array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                    shuffle($drug_one_list);
+
                     $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                     if(preg_match('/\s/', $static_interaction)) {
                         $static_interaction = str_replace(' ', '_', $static_interaction);
@@ -108,6 +112,9 @@
                 }
             } else {
                 foreach($position_range_trial_one as $key => $value) {
+
+                    array_push($drug_one_list, $_SESSION['Trials'][$value]['Response']['drugonestatic']);
+                    shuffle($drug_one_list);
 
                     $static_interaction = $_SESSION['Trials'][$value]['Response']['interactionstatic'];
                     if(preg_match('/\s/', $static_interaction)) {
@@ -141,18 +148,11 @@
             <div class="drugName">
                 <select name="Response">
                     <option disabled hidden selected></option>
-                    <option>dry mouth</option>
-                    <option>itching</option>
-                    <option>cough</option>
-                    <option>trembling</option>
-                    <option>flushing</option>
-                    <option>fever</option>
-                    <option>fatigue</option>
-                    <option>bloating</option>
-                    <option>clumsiness</option>
-                    <option>nausea</option>
-                    <option>diarrhea</option>
-                    <option>arm pain</option>
+                    <?php
+                        for($ii = 0; $ii < count($drug_one_list); $ii++) {
+                            echo "<option>" . $drug_one_list[$ii] . "</option>";
+                        }
+                    ?>
                 </select>
             </div>
             <img src="../Experiment/TrialTypes/Test_medone/bottle.jpg">
