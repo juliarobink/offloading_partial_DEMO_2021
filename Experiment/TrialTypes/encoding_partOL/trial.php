@@ -240,12 +240,12 @@
                 $(".interactionSaveArea button").prop("disabled", true);
             }
 
-            save_clicks_made++;
-
             if(save_clicks_made == 0) {
                 document.getElementById("numsavestatus").value = "SAVE";
                 document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
             }
+
+            save_clicks_made++;
         });
 
         $(".drugTwoSaveArea button").on("click", function() {
@@ -267,12 +267,12 @@
                 $(".interactionSaveArea button").prop("disabled", true);
             }
 
-            save_clicks_made++;
-
             if(save_clicks_made == 0) {
                 document.getElementById("numsavestatus").value = "SAVE";
                 document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
             }
+
+            save_clicks_made++;
         });
 
         $(".interactionSaveArea button").on("click", function() {
@@ -294,12 +294,12 @@
                 $(".interactionSaveArea button").prop("disabled", true);
             }
 
-            save_clicks_made++;
-
             if(save_clicks_made == 0) {
                 document.getElementById("numsavestatus").value = "SAVE";
                 document.getElementById("newnumsavesvalue").value = --numSavesRemaining;
             }
+
+            save_clicks_made++;
         });
 
 
