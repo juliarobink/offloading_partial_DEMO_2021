@@ -14,10 +14,10 @@ Item,Trial Type,Timing,Text,Settings,Combination,Combo_Code,Fan_Condition,Severi
 "6,7",encoding_partOL,7,,,"fake,fake",0,0,cough,,3,test1
 "17,8",encoding_partOL,7,,,"fake,real",1,0,trembling,,4,test1
 0,instruct,user,<p> You will now see the same interactions again. Please try to remember as much information about them as you can. </p>,,,,,,,,off
-"2,3",Test_sideeffect,7,,,"fake,fake",0,0,dry mouth,,1,study2
-"4,5",Test_sideeffect,7,,,"fake,fake",0,0,itching,,2,study2
-"6,7",Test_med1,7,,,"fake,fake",0,0,cough,,3,study2
-"17,8",Test_med2,7,,,"fake,real",1,0,trembling,,4,study2
+"2,3",Test_medone,user,,,"fake,fake",0,0,dry mouth,,1,study2
+"4,5",Test_medone,user,,,"fake,fake",0,0,itching,,2,study2
+"6,7",Test_medone,user,,,"fake,fake",0,0,cough,,3,study2
+"17,8",Test_medone,user,,,"fake,real",1,0,trembling,,4,study2
 0,instruct,user,<p> You will now be presented with each pair and asked to recall as many of the outcomes as you can. Please take as much time as you need. </p>,,,,,,,,off
 "2,3",Test_med1,user,,,"fake,fake",0,0,dry mouth,,1,test2
 "4,5",Test_med2,user,,,"fake,fake",0,0,itching,,2,test2

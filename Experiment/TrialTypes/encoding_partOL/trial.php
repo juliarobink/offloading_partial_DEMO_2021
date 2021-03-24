@@ -186,7 +186,8 @@
     <div><?php echo $text; ?></div>
 
     <div class="oldNewAnsArea stage1">
-        <button style="width:30%;" type="button" id="savebuttdont" name="savebutt" value="DONTSAVE">DON'T SAVE</button>
+        <div style="margin-top: 15px;"></div>
+        <button style="width:30%; color: red;" type="button" id="savebuttdont" name="savebutt" value="DONTSAVE">DON'T SAVE</button>
         <!-- <button style="width:30%;" type="button" id="savebuttdo" name="savebutt" value="SAVE">SAVE</button> -->
     </div>
 
