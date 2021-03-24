@@ -144,6 +144,7 @@
     <div><?php echo $text; ?></div>
 
     <div class="imageArea">
+        <!-- Start Drug 1 Chunk -->
         <div class="bottleArea">
             <div class="drugName">
                 <select name="Response">
@@ -157,6 +158,7 @@
             </div>
             <img src="../Experiment/TrialTypes/Test_medone/bottle.jpg">
         </div>
+        <!-- End Drug 1 Chunk -->
         <div class="divider">+</div>
         <?= $drugs[1] ?>
         <div class="divider">=</div>

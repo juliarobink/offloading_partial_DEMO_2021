@@ -186,7 +186,7 @@
     <div><?php echo $text; ?></div>
 
     <div class="oldNewAnsArea stage1">
-        <div style="margin-top: 15px;"></div>
+        <div style="margin-top: 35px;"></div>
         <button style="width:30%; color: red;" type="button" id="savebuttdont" name="savebutt" value="DONTSAVE">DON'T SAVE</button>
         <!-- <button style="width:30%;" type="button" id="savebuttdo" name="savebutt" value="SAVE">SAVE</button> -->
     </div>
@@ -215,7 +215,8 @@
             document.getElementById("savebuttdont").disabled = true;
             document.getElementById("saveDrugOne").disabled = true;
             document.getElementById("saveDrugTwo").disabled = true;
-            document.getElementById("saveInteraction").disabled = true;            
+            document.getElementById("saveInteraction").disabled = true; 
+            document.getElementById("savebuttdont").style.color = '#1010104D';
         }
 
         var phaseStartTime;
@@ -224,6 +225,10 @@
         console.log(numSavesRemaining);
 
         var save_clicks_made = 0;
+
+        document.getElementById('drugonestatic').value = drug_one;
+        document.getElementById('drugtwostatic').value = drug_two;
+        document.getElementById('interactionstatic').value = interaction;
 
         $(".drugOneSaveArea button").on("click", function() {
             var choice = $(this).html();
