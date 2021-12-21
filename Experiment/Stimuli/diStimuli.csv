@@ -1,37 +1,17 @@
 Cue,Answer,Substance Type,SubstanceCode,Shuffle
-Rolidal,Rolidal,fake drug,0,fake
-Lipal,Lipal,fake drug,0,fake
-Pylacor,Pylacor,fake drug,0,fake
-Floragin,Floragin,fake drug,0,fake
-Volapram,Volapram,fake drug,0,fake
-Lypamol,Lypamol,fake drug,0,fake
-Promazatol,Promazatol,fake drug,0,fake
-Clavosec,Clavosec,fake drug,0,fake
-Avaridol,Avaridol,fake drug,0,fake
-Durapam,Durapam,fake drug,0,fake
-Volexum,Volexum,fake drug,0,fake
-Tretonin,Tretonin,fake drug,0,fake
-Dypraxa,Dypraxa,fake drug,0,fake
-Doloxan,Doloxan,fake drug,0,fake
-Phedrazone,Phedrazone,fake drug,0,fake
-Mobic,Mobic,real drug,1,real
-Namenda,Namenda,real drug,1,real
-Macrobid,Macrobid,real drug,1,real
-Colchicine,Colchicine,real drug,1,real
-Deltasone,Deltasone,real drug,1,real
-Scopolamine,Scopalomine,real drug,1,real
-Antivert,Antivert,real drug,1,real
-Fioricet,Fioricet,real drug,1,real
-Zelnorm,Zelnorm,real drug,1,real
-Aldactone,Aldactone,real drug,1,real
-Glucophage,Glucophage,real drug,1,real
-Cordarone,Cordarone,real drug,1,real
-Nardil,Nardil,real drug,1,real
-Synthroid,Synthroid,real drug,1,real
-Norvasc,Norvasc,real drug,1,real
-images/Coffee.png,Caffeine,Consumable,2,Consumable
-images/CranberryJuice.png,Cranberry Juice,Consumable,2,Consumable
-images/Bananas.png,Bananas,Consumable,2,Consumable
-images/Licorice.png,Licorice,Consumable,2,Consumable
-images/Grapefruit.png,Grapefruit,Consumable,2,Consumable
-images/Alcohol.png,Alcohol,Consumable,2,Consumable
+Medication A,Medication A,fake drug,0,off
+Medication B,Medication B,fake drug,0,off
+Medication C,Medication C,fake drug,0,off
+Medication D,Medication D,fake drug,0,off
+Mediciation E,Mediciation E,fake drug,0,off
+Medication F,Medication F,fake drug,0,off
+Medication G,Medication G,fake drug,0,off
+Medication H,Medication H,fake drug,0,off
+Medication I,Medication I,fake drug,0,off
+Medication J,Medication J,fake drug,0,off
+Medication K,Medication K,fake drug,0,off
+Medication L,Medication L,fake drug,0,off
+Medication M,Medication M,fake drug,0,off
+Medication N,Medication N,fake drug,0,off
+Medication O,Medication O,fake drug,0,off
+Medication P,Medication P,real drug,0,off

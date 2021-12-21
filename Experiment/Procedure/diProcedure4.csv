@@ -4,10 +4,10 @@ Item,Trial Type,Timing,Text,Settings,Partial,Combination,Combo_Code,Fan_Conditio
 <p>For each interaction that you study, you will see two medications and the outcome that would occur if they were to be taken together (e.g., ""dry mouth""). Each outcome will only occur once -- that is, only one pair of medications will result in dry mouth.  </p> <p>Please advance to see more instructions.</p>",,,,,,,,,off
 0,instruct,user," <p> On each trial, you will have the opportunity to choose whether you would like to SAVE the interaction that is on the screen. </p> <p> If you choose to SAVE the interaction, you will have access to the entire interaction at a later time.</p> <p> Please click either ""SAVE"" or ""DON'T SAVE"" on each trial to indicate your choice.</p> <p> Please remember as much information about the substances and their interactions as you can. Your memory will be tested for either the health outcome that is associated with each pair of medications or for either one of the medications. You will only be tested on one piece of information.</p>
 <p>When you're ready to begin the experiment, click ''Next.''</p> ",,,,,,,,,off
-"2,3",encoding_fullOL,7,,,,"fake,fake",0,0,dry mouth,,1,study1
-"4,5",encoding_fullOL,7,,,,"fake,fake",0,0,itching,,2,study1
-"6,7",encoding_fullOL,7,,,,"fake,fake",0,0,cough,,3,study1
-"17,8",encoding_fullOL,7,,,,"fake,real",1,0,trembling,,4,study1
+"2,3",encoding_fullOL,7,,,,"fake,fake",0,0,Side effect 1,,off,off
+"4,5",encoding_fullOL,7,,,,"fake,fake",0,0,Side effect 2,,off,off
+"6,7",encoding_fullOL,7,,,,"fake,fake",0,0,Side effect 3,,off,off
+"8,9",encoding_fullOL,7,,,,"fake,real",1,0,Side effect 4,,off,off
 0,instruct,user,"<p>Your memory will now be tested for either the health outcome that is associated with each pair of medications or for either one of the medications. You will only be tested on one piece of information.</p><p> For example, you may be presented with one of the following during this test.</p>
 <p>1. <i>''______________+ Medication B = side effect""</i> and asked to recall Medication A.</p>
 <p>2. <i> ""Medication A + _________= side effect"" </i>and will be asked to recall Medication B.</p>
@@ -15,28 +15,28 @@ Item,Trial Type,Timing,Text,Settings,Partial,Combination,Combo_Code,Fan_Conditio
 <p>You may consult the list of interactions that you saved in the previous trial to help you on this test.
 Please take as much time as you need.</p>
 ",,,,,,,,,off
-"2,3",Test_medone,user,,,0,"fake,fake",0,0,dry mouth,,1,test1
-"4,5",Test_medtwo,user,,,0,"fake,fake",0,0,itching,,2,test1
-"6,7",Test_sideeffect,user,,,0,"fake,fake",0,0,cough,,3,test1
-"17,8",Test_sideeffect,user,,,0,"fake,real",1,0,trembling,,4,test1
+"2,3",Test_medone,user,,,0,"fake,fake",0,0,Side effect 1,,off,off
+"4,5",Test_medtwo,user,,,0,"fake,fake",0,0,Side effect 2,,off,off
+"6,7",Test_sideeffect,user,,,0,"fake,fake",0,0,Side effect 3,,off,off
+"8,9",Test_sideeffect,user,,,0,"fake,real",1,0,Side effect 4,,off,off
 0,instruct,user,"<p>Each interaction you will see is composed of three elements: Medication A, Medication B and a side effect. On each trial, you will have the opportunity to choose whether you would like to save <b>two of the three elements </b> of the interaction that is shown on the screen. You will be able to save 9 interactions.</p><p> To save an element, please click on the ""SAVE"" button below that element. Whichever two elements of the interaction you saved will be accessible to you at a later time.</p>
 <p>If you do not wish to save any elements of the interaction, please click ""DON'T SAVE"". Each interaction will be displayed on the screen for 7 seconds.</p>
 <p>Please remember as much information about the substances and their interactions as you can. Your memory will be tested for either the health outcome that is associated with each pair of medications or for either one of the medications. You will only be tested on one piece of information </p>
 ",,,,,,,,,off
-"2,3",encoding_partOL,7,,,,"fake,fake",0,0,dry mouth,,1,study2
-"4,5",encoding_partOL,7,,,,"fake,fake",0,0,itching,,2,study2
-"6,7",encoding_partOL,7,,,,"fake,fake",0,0,cough,,3,study2
-"17,8",encoding_partOL,7,,,,"fake,real",1,0,trembling,,4,study2
+"2,3",encoding_partOL,7,,,,"fake,fake",0,0,Side effect 5,,off,off
+"4,5",encoding_partOL,7,,,,"fake,fake",0,0,Side effect 6,,off,off
+"6,7",encoding_partOL,7,,,,"fake,fake",0,0,Side effect 7,,off,off
+"8,9",encoding_partOL,7,,,,"fake,real",1,0,Side effect 8,,off,off
 0,instruct,user,"<p>Your memory will now be tested for either the health outcome that is associated with each pair of medications or for either one of the medications. You will only be tested on one piece of information.</p><p> For example, you may be presented with one of the following during this test.</p>
 <p>1. <i>''______________+ Medication B = side effect""</i> and asked to recall Medication A.</p>
 <p>2. <i> ""Medication A + _________= side effect"" </i>and will be asked to recall Medication B.</p>
 <p>3.<i> Medication A + Medication B = ________"" </i>and be asked to recall the side effect. </p>
 <p>You may consult the list of interactions that you saved in the previous trial to help you on this test.
 Please take as much time as you need.</p>",,,,,,,,,off
-"2,3",Test_medone,user,,,1,"fake,fake",0,0,dry mouth,,1,test2
-"4,5",Test_medtwo,user,,,1,"fake,fake",0,0,itching,,2,test2
-"6,7",Test_sideeffect,user,,,1,"fake,fake",0,0,cough,,3,test2
-"17,8",Test_sideeffect,user,,,1,"fake,real",1,0,trembling,,4,test2
+"2,3",Test_medone,user,,,1,"fake,fake",0,0,Side effect 5,,off,off
+"4,5",Test_medtwo,user,,,1,"fake,fake",0,0,Side effect 6,,off,off
+"6,7",Test_sideeffect,user,,,1,"fake,fake",0,0,Side effect 7,,off,off
+"8,9",Test_sideeffect,user,,,1,"fake,real",1,0,Side effect 8,,off,off
 0,instruct,user,"<p> Debrief: Some of the medications presented in this experiment do have real effects, but are not meant to serve as an informational or diagnostic tool. Some of the medications presented above are fictitious, and therefore do not actually have any effect. Please contact your own doctor if you have any questions regarding the side effects of your personal medication.</p> <p> The following medications you saw were fictitious: <br> Rolidal <br>
 Lipal <br>
 Pylacor <br>
