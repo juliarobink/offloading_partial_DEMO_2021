@@ -1,7 +1,7 @@
 <?php
     $compTime = 5;        // time in seconds to use for 'computer' timing
 
-    $startingcounter = 2; // number to start for available saves per block
+    $startingcounter = 3; // number to start for available saves per block
     $totalNumItems = 4;  // 12 trials per block
 
     $imageFilePath = dirname($_SESSION['Trial Types'][$trialType]['trial']) . '/bottle.jpg';
@@ -12,7 +12,7 @@
         $drugs = $_SESSION['Drugs'][$cue];
     } else {
         $drugs = explode('|', $cue);
-        shuffle($drugs);
+        //shuffle($drugs);
         $_SESSION['Drugs'][$cue] = $drugs;
     }
 
